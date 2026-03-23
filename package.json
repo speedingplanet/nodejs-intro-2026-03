@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-intro-2026-03",
+  "version": "1.0.0",
+  "description": "Introduction to Node.js, starting 2026-03-23",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/speedingplanet/nodejs-intro-2026-03.git"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs"
+  ],
+  "author": "John Paxton <pax@speedingplanet.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/speedingplanet/nodejs-intro-2026-03/issues"
+  },
+  "homepage": "https://github.com/speedingplanet/nodejs-intro-2026-03#readme"
+}
