@@ -5,7 +5,7 @@ export default [
 	js.configs.recommended,
 	{
 		name: '@speedingplanet/eslint-config',
-		files: ['**/*.{cjs,mjs,js,ts}?(x)'],
+		files: ['**/*.{cjs,mjs,js}?(x)'],
 		languageOptions: {
 			globals: {
 				...globals.browser,

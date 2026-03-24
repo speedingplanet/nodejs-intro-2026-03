@@ -1,4 +1,4 @@
-import { test, expect, describe, beforeEach, beforeAll, afterEach, afterAll } from 'vitest';
+import { test, expect, describe, beforeEach, beforeAll } from 'vitest';
 
 // How many times will this run? (4 times)
 beforeEach(() => console.log('Outer beforeEach'));
