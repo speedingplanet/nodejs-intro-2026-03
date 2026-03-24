@@ -2,6 +2,10 @@ export function add(...args) {
 	return args.reduce((total, arg) => arg + total);
 }
 
+export function addOld(x, y) {
+	return x + y;
+}
+
 export function subtract(...args) {
 	let initialValue = args.shift();
 	return args.reduce((total, arg) => total - arg, initialValue);
