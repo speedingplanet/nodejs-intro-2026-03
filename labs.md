@@ -49,3 +49,55 @@ Can you write your tests so that ONLY the single implemented `divide` test runs?
 Change your code so that ONLY the `describe` block with the `divide` tests run (e.g. do not run `subtract` or `multiply` tests).
 
 Finish by making sure that all tests in all blocks run.
+
+## Async and the filesystem
+
+### Part 1
+
+Use `fs.readFile` to read the contents of data/users.csv
+Docs:
+Promises version: https://nodejs.org/docs/latest-v24.x/api/fs.html#fspromisesreadfilepath-options
+Callback version: https://nodejs.org/docs/latest-v24.x/api/fs.html#fsreadfilepath-options-callback
+
+Note that you should use the version from fs/promises, unless you want to experiment with callbacks
+
+### Part 2
+
+Use `fs-extra.pathExists` to check the existence of a file
+Docs: https://github.com/jprichardson/node-fs-extra/blob/master/docs/pathExists.md
+
+### Part 3
+
+Use `fs.appendFile` to add a line to the file:
+Docs:
+Promises version: https://nodejs.org/docs/latest-v24.x/api/fs.html#fspromisesappendfilepath-data-options
+Callback version: https://nodejs.org/docs/latest-v24.x/api/fs.html#fsappendfilepath-data-options-callback
+
+Note that you should use the version from fs/promises, unless you want to experiment with callbacks
+
+Line to add (or make up your own):
+1001,John,Paxton,pax@speedingplanet.com,Nutley,New Jersey,United States
+
+## REST Server
+
+### Part 1: Setting up the server
+
+Set up a server in an `app` folder in the root of our project.
+
+We can work with most of the code that's in demos/express.
+
+Getting express up and running on a port of our choice with our own message is our goal for this exercise
+
+### Part 2: GET /users
+
+We want the REST path `GET /users` to work. What do we need to do?
+
+### Part 3: GET /users/{id}
+
+### Part 4: Building a data access layer
+
+### Part 5: POST /users
+
+### Part 6: PATCH /users/{id}
+
+### Part 7: DELETE /users/{id}
