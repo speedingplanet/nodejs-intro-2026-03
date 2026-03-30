@@ -39,16 +39,13 @@ function accessFileWithPromises(filePath) {
 		}
 	);
 	*/
-
 	// Alternative style: promise.then(successCallback).catch(errorCallback)
-	fsPromises
-		.access(filePath, fs.constants.F_OK)
-		.then(() => {
-			console.log(chalk.blue(`fs-promises.access: File ${filePath} exists and is visible.`));
-		})
-		.catch(() => {
-			console.error(chalk.red(`fs-promises.access: Could not access file at ${filePath}`));
-		});
+	let p1 = fsPromises.access(filePath, fs.constants.F_OK);
+	p1.then(() => {
+		console.log(chalk.blue(`fs-promises.access: File ${filePath} exists and is visible.`));
+	}).catch(() => {
+		console.error(chalk.red(`fs-promises.access: Could not access file at ${filePath}`));
+	});
 }
 
 accessFileWithPromises(goodPath);
@@ -70,4 +67,6 @@ async function accessFileWithAsyncAwait(filePath) {
 }
 
 accessFileWithAsyncAwait(goodPath);
+console.log('Hello!');
 accessFileWithAsyncAwait(badPath);
+// Do some other stuff

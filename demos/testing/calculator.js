@@ -11,7 +11,10 @@ export function subtract(...args) {
 
 	// Works by using the `this` keyword
 	// `this` is a reference to the execution context for this code
-	this.hook();
+	this?.hook();
+	if (this !== undefined && this !== null) {
+		this.hook();
+	}
 
 	// Will break the test, because `hook` without a `this` cannot be
 	// spied on.

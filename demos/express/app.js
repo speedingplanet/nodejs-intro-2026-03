@@ -9,6 +9,7 @@ import logger from 'morgan';
 
 import indexRouter from './routes/index.js';
 import usersRouter from './routes/users.js';
+import cheesesRouter from './routes/cheeses.js';
 
 let __dirname = import.meta.dirname;
 
@@ -23,8 +24,10 @@ app.use(serveFavicon(path.join(__dirname, 'public', 'rocket.png')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/cheeses', cheesesRouter);
 
 // catch 404 and forward to error handler
+/*
 app.use(function (req, res, next) {
 	next(createError(404));
 });
@@ -39,5 +42,6 @@ app.use(function (err, req, res) {
 	res.status(err.status || 500);
 	res.render('error');
 });
+*/
 
 export default app;

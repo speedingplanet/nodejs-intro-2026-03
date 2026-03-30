@@ -46,7 +46,7 @@ Implement one of the tests under the `divide` block.
 
 Can you write your tests so that ONLY the single implemented `divide` test runs?
 
-Change your code so that ONLY the `describe` block with the `divide` tests run (e.g. do not run `subtract` or `multiply` tests).
+Change your code so that ONLY the `describe` block with the `divide` tests runs (e.g. do not run `subtract` or `multiply` tests).
 
 Finish by making sure that all tests in all blocks run.
 
@@ -55,11 +55,26 @@ Finish by making sure that all tests in all blocks run.
 ### Part 1
 
 Use `fs.readFile` to read the contents of data/users.csv
+
+Create `demos/filesystem/get-users.js`.
+
+Use this code to load the necessary libraries and configure the path to the file
+
+```js
+import fs from 'node:fs';
+import fsPromises from 'node:fs/promises';
+import path from 'node:path';
+let __dirname = import.meta.dirname;
+let filePath = path.resolve(__dirname, '../../data/users.csv');
+```
+
 Docs:
 Promises version: https://nodejs.org/docs/latest-v24.x/api/fs.html#fspromisesreadfilepath-options
 Callback version: https://nodejs.org/docs/latest-v24.x/api/fs.html#fsreadfilepath-options-callback
 
 Note that you should use the version from fs/promises, unless you want to experiment with callbacks
+
+Print out a count of the number of lines, and a sample of the first five lines.
 
 ### Part 2
 
