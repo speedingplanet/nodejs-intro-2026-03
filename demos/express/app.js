@@ -1,6 +1,3 @@
-// const createError = require('http-errors');
-import createError from 'http-errors';
-// const express = require('express');
 import express from 'express';
 import path from 'node:path';
 import cookieParser from 'cookie-parser';
